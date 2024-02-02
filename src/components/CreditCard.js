@@ -12,7 +12,7 @@ const CreditCard = ({type, number, expirationMonth, expirationYear, bank, owner,
     <div className="credit-card" style={card}>
         <img className="card--image"/>
         <p>{number}</p>
-        <p>Expires {expirationMonth},{expirationYear}   {bank}</p>
+        <p>Expires {expirationMonth} / {expirationYear}   {bank}</p>
         <p>{owner}</p>
     </div>
   )

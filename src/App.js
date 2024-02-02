@@ -1,6 +1,11 @@
 import './App.css';
 import IdCard from './components/idCard';
 import BoxColor from './components/BoxColor';
+import Greeting from './components/Greetings'
+import Random from './components/Random'
+import CreditCard from './components/CreditCard'
+
+
 const App = () => {
   const idCardData = {
     lastName: 'Doe',
@@ -35,12 +40,29 @@ const App = () => {
         <IdCard {...idCardData} />
         <IdCard {...idCardData2} />
       </div>
+      <Greeting lang="de" children="Ludwig"/>
+      <Greeting lang="fr" children="François"/>
+      <Random min={1} max={6} />
+      <Random min={1} max={100} />
+
       <div className="BoxColor">
         <div className="header"> BoxColor</div>
         <BoxColor {...BoxColorData} />
         <BoxColor {...BoxColorData2} />
       </div>
+
+      <CreditCard 
+      type="Visa"
+      number="0123456789018845"
+      expirationMonth={3}
+      expirationYear={2021}
+      bank="BNP"
+      owner="Maxence Bouret"
+      bgColor="#11aa99"
+      color="white" 
+      />
     </div>
   );
   };
-export default App;
+  
+  export default App;

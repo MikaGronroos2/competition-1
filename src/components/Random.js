@@ -8,7 +8,7 @@ const Random = ({min, max}) => {
 
   return (
     <div className="random">
-        <p>"Random value between {min} and {max} is {number}</p>
+        <p>Random value between {min} and {max} is {number}</p>
     </div>
   )
 }
