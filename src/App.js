@@ -4,6 +4,7 @@ import BoxColor from './components/BoxColor';
 import Greeting from './components/Greetings'
 import Random from './components/Random'
 import CreditCard from './components/CreditCard'
+import CreditCardBackup from './components/CreditCardBackup';
 
 
 const App = () => {
@@ -51,7 +52,7 @@ const App = () => {
         <BoxColor {...BoxColorData2} />
       </div>
 
-      <CreditCard 
+      <CreditCardBackup 
       type="Visa"
       number="0123456789018845"
       expirationMonth={3}
@@ -61,6 +62,17 @@ const App = () => {
       bgColor="#11aa99"
       color="white" 
       />
+      <CreditCardBackup
+      type="Master Card"
+      number="0123456789010995"
+      expirationMonth={3}
+      expirationYear={2021}
+      bank="N26"
+      owner="Maxence Bouret"
+      bgColor="#eeeeee"
+      color="#222222"
+      />
+
     </div>
   );
   };
