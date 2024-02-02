@@ -40,3 +40,34 @@
   margin: 10px;
   border: 1px solid #000;
 }
+
+.creditCardBox {
+display: flex;
+flex-direction: row;
+width: 100%;
+}
+
+.type {
+  text-align: right;
+}
+
+.number {
+  font-size: 1.9em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card--image {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  max-width: 56px;
+  justify-content: right;
+}
+
+.credit-card {
+  margin: 10px;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 10px;
+    display: inline-block;
+}

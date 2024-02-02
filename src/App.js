@@ -3,7 +3,6 @@ import IdCard from './components/idCard';
 import BoxColor from './components/BoxColor';
 import Greeting from './components/Greetings'
 import Random from './components/Random'
-import CreditCard from './components/CreditCard'
 import CreditCardBackup from './components/CreditCardBackup';
 
 
@@ -68,7 +67,8 @@ const App = () => {
         <div className="boxColorBox">
           <BoxColor {...BoxColorData2} />
       </div>
-
+      <div className="header">CreditCard</div>
+      <div className="creditCardBox">
       <CreditCardBackup 
       type="Visa"
       number="0123456789018845"
@@ -79,6 +79,8 @@ const App = () => {
       bgColor="#11aa99"
       color="white" 
       />
+     
+      
       <CreditCardBackup
       type="Master Card"
       number="0123456789010995"
@@ -89,6 +91,18 @@ const App = () => {
       bgColor="#eeeeee"
       color="#222222"
       />
+
+      <CreditCardBackup
+      type="Visa"
+      number="0123456789016984"
+      expirationMonth={12}
+      expirationYear={19}
+      bank="Name of the Bank"
+      owner="Firstname Lastname"
+      bgColor="rgb(221, 187, 86)"
+      color="white"
+      />
+      </div>
 
     </div>
   );

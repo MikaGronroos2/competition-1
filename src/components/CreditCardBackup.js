@@ -4,11 +4,13 @@ const CreditCardBackup = ({type, number, expirationMonth, expirationYear, bank, 
 
     const cardData = [{
         "type":"Visa",
-        "source":"../images/Visa_brandmark_Blue_RGB_2021.png"
+        "source":"../images/Visa_brandmark_Blue_RGB_2021.png",
+        "alt":"Visa Card Logo"
     },
     {
         "type":"Master Card",
-        "source":"../images/mc_symbol_opt_73_3x.png"
+        "source":"../images/mc_symbol_opt_73_3x.png",
+        "alt":"Master Card Logo"
     }]
 
     const cardIcon = cardData.find(thing => thing.type === type);
@@ -25,13 +27,22 @@ const CreditCardBackup = ({type, number, expirationMonth, expirationYear, bank, 
     const hiddennumber = hideNumber(number);
 
   return (
-    <div className="credit-card">
-        <img src={cardIcon.source}className="card--image"/>
-        <p>{hiddennumber}</p>
-        <p>Expires {expirationMonth} / {expirationYear}   {bank}</p>
-        <p>{owner}</p>
+    <div className="credit-card" style={{"background":bgColor, "color" : color}}>
+    <div className="type">
+        <img src={cardIcon.source}className="card--image" alt='Card'/>
+    </div>
+    <div className='number'>
+        {hiddennumber}
+    </div>
+    <div className="expiration">
+        Expires {expirationMonth} / {expirationYear}  {bank}
+    </div>
+    <div className="owner">
+        {owner}
+    </div>
     </div>
   )
 }
+
 
 export default CreditCardBackup;
